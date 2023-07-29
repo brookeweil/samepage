@@ -1,20 +1,33 @@
-import './App.css';
+import { ChakraProvider } from "@chakra-ui/react";
+import * as React from "react";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+
+import "./App.css";
+
+import Create from "./pages/Create";
+import Welcome from "./pages/Welcome";
 
 function App() {
   return (
-    <div className="App">
-      <h1>SamePage</h1>
-      <h2>
-        For Trivia in a loud bar, live closed-captioning, or any time you want to be on the same page.
-      </h2>
+    <ChakraProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Welcome />} />
+          <Route exact path="/create" element={<Create />} />
+          {/* <Route exact path="/profile" component={ProfilePage} />
+          <Route path="/profile/:username" component={ProfileDetailPage} />
+        <Route path="/feed" component={FeedPage} /> */}
+        </Routes>
+      </BrowserRouter>
       {/* TODO
-        - screen for when you first arrive at the page: create a room, login, or login as an editor
-        - cookie for 24h to save recent room code
-        - view screen: poll every 1-2s for room code
-        - create screen: create key and password and submit (initialize text to "Welcome" or something)
-        - edit screen: submit new text for the room key while passing pw      
-      */}
-    </div>
+          - screen for when you first arrive at the page: create a room, login, or login as an editor
+          - cookie for 24h to save recent room code
+          - view screen: poll every 1-2s for room code
+          - create screen: create key and password and submit (initialize text to "Welcome" or something)
+          - edit screen: submit new text for the room key while passing pw     
+          - update Favicon and tab title text 
+        */}
+    </ChakraProvider>
   );
 }
 
