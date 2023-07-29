@@ -1,5 +1,5 @@
 {
-  "name": "same-page",
+  "name": "samepage",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,7 +11,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://brookeweil.github.io/same-page/",
+  "homepage": "https://brookeweil.github.io/samepage/",
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build && node versionUtil.js",
