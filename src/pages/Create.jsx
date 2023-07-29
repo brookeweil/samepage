@@ -69,7 +69,13 @@ const Welcome = () => {
           Get started
         </Button>
       </Stack>
-      {redirectReady && <Navigate to={`/room/${name}`} replace={true} />}
+      {redirectReady && (
+        <Navigate
+          state={{ test: "test" }}
+          to={`/room/${name}?passcode=${passcode}`}
+          replace={true}
+        />
+      )}
     </>
   );
 };

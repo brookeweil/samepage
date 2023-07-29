@@ -5,6 +5,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "./App.css";
 
 import Create from "./pages/Create";
+import Room from "./pages/Room";
 import Welcome from "./pages/Welcome";
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Welcome />} />
-          <Route exact path="/create" element={<Create />} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/room/:key" element={<Room />} />
           {/* <Route exact path="/profile" component={ProfilePage} />
           <Route path="/profile/:username" component={ProfileDetailPage} />
         <Route path="/feed" component={FeedPage} /> */}
